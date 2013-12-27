@@ -21,7 +21,7 @@ Message message = client.getMessage(query);
 To get list of all the entities:
 
 ```java
-List<String> entityNames = client.getEntities();
+List<String> entityNames = client.getEntities();//it uses Apache HttpClient under the hood
 ```
 
 To get an entity
