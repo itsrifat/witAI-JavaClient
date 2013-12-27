@@ -39,41 +39,4 @@ public class WitUtils {
 
     return valid;
   }
-
-  public static Boolean validateAudioFleType(File file,String targetContentType){
-    InputStream input=null;
-    try{
-      input = new FileInputStream(file);
-      ContentHandler handler = new DefaultHandler();
-      Metadata metadata = new Metadata();
-      Parser parser = new AudioParser();
-      ParseContext parseCtx = new ParseContext();
-      parser.parse(input, handler, metadata, parseCtx);
-      input.close();
-      for(String meta:metadata.names()){
-        LOGGER.debug(meta+":"+metadata.get(meta));
-      }
-      if(metadata.get("Content-Type").contains(targetContentType)){
-        return true;
-      }
-      else {
-        return false;
-      }
-
-
-    }
-    catch (FileNotFoundException ex){
-
-    }
-    catch (IOException ex){
-
-    }
-    catch (SAXException e) {
-
-    } catch (TikaException e) {
-
-    }
-    return false;
-
-  }
 }
