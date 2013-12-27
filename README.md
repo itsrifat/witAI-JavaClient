@@ -28,7 +28,7 @@ To get an entity
 
 ```java
 String entityId="myEntityId";
-Entity entity = client.getEntitY(etityId);
+Entity entity = client.getEntity(etityId);
 ```
 
 
