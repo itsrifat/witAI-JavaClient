@@ -31,6 +31,23 @@ String entityId="myEntityId";
 Entity entity = client.getEntity(etityId);
 ```
 
+List of available methods:
+--------------------------
+```java
 
+public Message getMessage(String query)
+public Message getMessage(String query,String version)
+public Message getMessage(File audioFlie)
+public Message getMessageById(String messageId)
+public List<String> getEntities()
+public Entity getEntity(String entityId)
+public Entity postEntity(Entity entity)
+public Entity putEntity(Entity entity)
+public Boolean deleteEntity(String entityId)
+public Entity postEntityValues(String entityId,Map<String,Object> values)
+public Boolean deleteEntityValue(String entityId, String value)
+public Entity postEntityValueExpression(String entityId,String value,String expression)
+public Boolean deleteEntityValueExpression(String entityId, String value,String expression)
+```
 
 All of the methods throws WitException if desired input not found or desired result not found after api call.
