@@ -31,7 +31,7 @@ String entityId="myEntityId";
 Entity entity = client.getEntity(etityId);
 ```
 
-List of available methods:
+List of available methods in ```WitClient```:
 --------------------------
 ```java
 
