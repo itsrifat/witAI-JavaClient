@@ -169,7 +169,12 @@ public class WitClient {
 
   }
 
-
+  /**
+   *  makes a get request to https://api.wit.ai/message?q=query and returns a Message object
+   * @param query
+   * @return {@link Message}
+   * @throws WitException
+   */
   public Message getMessage(String query) throws WitException{
     if(query.length() > MAX_QUERY_LENGTH){
       throw new WitException("Length of Query must be must be > 0 and < "+MAX_QUERY_LENGTH);
