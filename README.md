@@ -6,7 +6,7 @@ Wit-JavaClient is a java wrapper for wit.ai( see https://wit.ai/docs/api) HTTP A
 How to Use
 ----------
 
-Its pretty simple. Just create a wit client and use its methods to make different API calls to wit.
+Create a ```WitClient``` and use its methods to make different API calls to wit.
 
 To get a message by a query:
 
