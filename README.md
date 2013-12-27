@@ -12,7 +12,7 @@ To get a message by a query:
 
 ```java
 String apiKey ="my api key";
-WitClient client = new WitClient(apiKey);
+WitClient client = new WitClient(apiKey);  //it uses Apache HttpClient under the hood
 
 String query = "Hey Mr tambourine man play a song for me";
 Message message = client.getMessage(query);
@@ -21,7 +21,7 @@ Message message = client.getMessage(query);
 To get list of all the entities:
 
 ```java
-List<String> entityNames = client.getEntities();//it uses Apache HttpClient under the hood
+List<String> entityNames = client.getEntities();
 ```
 
 To get an entity
