@@ -23,3 +23,14 @@ To get list of all the entities:
 ```java
 List<String> entityNames = client.getEntities();
 ```
+
+To get an entity
+
+```java
+String entityId="myEntityId";
+Entity entity = client.getEntitY(etityId);
+```
+
+
+
+All of the methods throws WitException if desired input not found or desired result not found after api call.
