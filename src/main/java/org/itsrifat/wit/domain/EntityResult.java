@@ -3,7 +3,7 @@ package org.itsrifat.wit.domain;
 import java.util.Map;
 
 /**
- * Author: Md Moinul Hossain
+ * Author: Moinul Hossain Rifat
  * email: moinul.hossain@csebuet.org
  * Date: 12/25/13
  */

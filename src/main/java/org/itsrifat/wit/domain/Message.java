@@ -7,7 +7,7 @@ import org.itsrifat.wit.json.MessageDeserializer;
 import java.util.List;
 
 /**
- * Author: Md Moinul Hossain
+ * Author: Moinul Hossain Rifat
  * email: moinul.hossain@csebuet.org
  * Date: 12/24/13
  */
