@@ -450,7 +450,7 @@ public class WitClient {
     Entity entity;
     CloseableHttpResponse response=null;
     try{
-      String path=getApiUrlString()+ENTITY_PATH+"/"+entityId+"/values";
+      String path=getApiUrlString()+ENTITY_PATH+"/"+entityId+"/"+ENTITY_VALUE_PATH;
       URI url = new URIBuilder(path).build();
       LOGGER.debug("Sending post request to: "+url);
       HttpPost post = new HttpPost(url);
@@ -495,7 +495,7 @@ public class WitClient {
     CloseableHttpResponse response=null;
     try{
       value=URLEncoder.encode(value,"UTF-8");
-      String path =  getApiUrlString()+ENTITY_PATH+"/"+entityId+"/values/"+value;
+      String path =  getApiUrlString()+ENTITY_PATH+"/"+entityId+"/"+ENTITY_VALUE_PATH+"/"+value;
       URI url = new URIBuilder(path).build();
       LOGGER.debug("Sending delete request to: "+url);
       HttpDelete delete = new HttpDelete(url);
@@ -532,7 +532,8 @@ public class WitClient {
     CloseableHttpResponse response=null;
     try{
       value =   URLEncoder.encode(value,"UTF-8").replace("+","%20");
-      String path = getApiUrlString()+ENTITY_PATH+"/"+entityId+"/values/"+value+"/expressions";
+      String path = getApiUrlString()+ENTITY_PATH+"/"+entityId+"/"+
+          ENTITY_VALUE_PATH+"/"+value+"/"+ENTITY_VALUE_EXPRESSION_PATH;
       URI url = new URIBuilder(path).build();
       HttpPost post = new HttpPost(url);
       LOGGER.debug("Sending get request to: "+url);
@@ -574,7 +575,8 @@ public class WitClient {
     CloseableHttpResponse response=null;
     try{
       expression = URLEncoder.encode(expression,"UTF-8").replace("+","%20");
-      String path = getApiUrlString()+ENTITY_PATH + "/"+entityId + "/values/" + value + "/expressions/"+expression;
+      String path = getApiUrlString()+ENTITY_PATH + "/"+entityId + "/"+ENTITY_VALUE_PATH
+                            +"/" + value + "/"+ENTITY_VALUE_EXPRESSION_PATH+"/"+expression;
       URI url = new URIBuilder(path).build();
       LOGGER.debug("Sending delete request to: "+url);
       HttpDelete delete = new HttpDelete(url);
