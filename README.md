@@ -1,7 +1,7 @@
-witAI-JavaClient
+witAI-JavaClient (DEPRECATED)
 ================
 
-Wit-JavaClient is a java wrapper for wit.ai( see https://wit.ai/docs/api) HTTP API.
+Wit-JavaClient is a java wrapper for wit.ai( see https://wit.ai/docs) HTTP API.
 
 How to Use
 ----------
